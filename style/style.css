@@ -1,0 +1,35 @@
+.swiper .swiper-wrapper .swiper-slide::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, .5);
+}
+
+.swiper .swiper-button-prev,
+.swiper .swiper-button-next {
+  color: #fff;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background: #9999994f;
+  font-size: 2rem;
+  transition: all .3s ease;
+}
+
+.swiper .swiper-button-prev::after,
+.swiper .swiper-button-next::after {
+  font-size: 1.75rem;
+}
+
+.swiper .swiper-button-prev:hover,
+.swiper .swiper-button-next:hover {
+  background: #5050504f;
+}
+
+.swiper .swiper-button-prev:hover::after,
+.swiper .swiper-button-next:hover::after {
+  color: #afafaf;
+}
