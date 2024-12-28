@@ -35,3 +35,26 @@ header nav ul li:hover::after {
   opacity: 1;
   transform: scaleX(1);
 }
+
+header button.login {
+  transition: all .3s ease;
+}
+
+header button.login:hover {
+  background: #ffffff80;
+  backdrop-filter: blur(4px);
+}
+
+.swiper .swiper-wrapper .swiper-slide .swiper-description {
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+
+.swiper .swiper-wrapper .swiper-slide .swiper-description button {
+  transition: all .3s ease;
+}
+
+.swiper .swiper-wrapper .swiper-slide .swiper-description button:hover {
+  background: #ffffff;
+}

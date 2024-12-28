@@ -14,6 +14,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Chonburi&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <!--box icons-->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <!--styles-->
   <link rel="stylesheet" href="style/style.css">
   <!--scripts-->
@@ -22,9 +24,12 @@
 </head>
 <body class="relative w-screen">
   <!--header-->
-  <header class="fixed w-full left-0 top-0 py-8 px-32 flex justify-between bg-transparent z-50">
-    <h1 class="font-bold tracking-widest text-xl">Altavia</h1>
-    <nav>
+  <header class="fixed w-full left-0 top-0 py-2 px-32 flex justify-between items-center z-50">
+    <a href="" class="title flex items-center gap-4">
+      <i class='bx bx-map-alt text-[28px]'></i>
+      <h1 class="font-bold tracking-widest text-xl">Altavia</h1>
+    </a>
+    <nav class="py-6 px-24 bg-[#ffffff80] rounded-lg backdrop-blur-sm">
       <ul class="flex gap-8">
         <li class="cursor-pointer">Home</li>
         <li class="cursor-pointer">Top Destinations</li>
@@ -33,27 +38,54 @@
         <li class="cursor-pointer">Contact Us</li>
       </ul>
     </nav>
+    <button class="login flex items-center justify-center w-12 h-12 p-4 rounded-full">
+      <i class='bx bx-user font-bold text-xl'></i>
+    </button>
   </header>
   <!--conteúdo principal-->
-  <main class="relative top-0 left-0 w-full h-screen z-0">
+  <main class="relative top-0 left-0 w-full z-0">
     <!--swiper-->
-    <div class="swiper w-full h-full">
+    <div class="swiper w-full h-screen">
       <div class="swiper-wrapper w-full h-full">
-        <div class="swiper-slide w-full h-full" id="1">
+        <div class="swiper-slide relative w-full h-full" id="1">
           <img class="object-cover w-full h-full" src="assets/bahamas.jpg" alt="imagem bahamas">
+          <div class="absolute inset-0 bg-white/20 backdrop-blur-sm"></div>
+          <div class="swiper-description absolute flex flex-col gap-8 z-100">
+            <h2 class="font-serif text-6xl">Transforme seus sonhos em destinos.</h2>
+            <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla dolores aliquid quos minima soluta ut blanditiis voluptate ab quidem, consequatur perferendis. Fugiat, tempore pariatur? Alias tempora accusamus dolores ab recusandae?</p>
+            <button class="w-[50%] self-center p-2 bg-[#ffffff80] rounded-lg backdrop-blur-sm">Conheça</button>
+          </div>
         </div>
-        <div class="swiper-slide" id="1">
+        <div class="swiper-slide" id="2">
           <img class="object-cover w-full h-full" src="assets/finland.jpg" alt="imagem finlândia">
+          <div class="absolute inset-0 bg-white/20 backdrop-blur-sm"></div>
+          <div class="swiper-description absolute flex flex-col gap-8 z-100">
+            <h2 class="font-serif text-6xl">Transforme seus sonhos em destinos.</h2>
+            <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla dolores aliquid quos minima soluta ut blanditiis voluptate ab quidem, consequatur perferendis. Fugiat, tempore pariatur? Alias tempora accusamus dolores ab recusandae?</p>
+            <button class="w-[50%] self-center p-2 bg-[#ffffff80] rounded-lg backdrop-blur-sm">Conheça</button>
+          </div>
         </div>
-        <div class="swiper-slide" id="1">
+        <div class="swiper-slide" id="3">
           <img class="object-cover w-full h-full" src="assets/maldivas.jpg" alt="imagem maldivas">
+          <div class="absolute inset-0 bg-white/20 backdrop-blur-sm"></div>
+          <div class="swiper-description absolute flex flex-col gap-8 z-100">
+            <h2 class="font-serif text-6xl">Transforme seus sonhos em destinos.</h2>
+            <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla dolores aliquid quos minima soluta ut blanditiis voluptate ab quidem, consequatur perferendis. Fugiat, tempore pariatur? Alias tempora accusamus dolores ab recusandae?</p>
+            <button class="w-[50%] self-center p-2 bg-[#ffffff80] rounded-lg backdrop-blur-sm">Conheça</button>
+          </div>
         </div>
-        <div class="swiper-slide" id="1">
+        <div class="swiper-slide" id="4">
           <img class="object-cover w-full h-full" src="assets/rio-de-janeiro.jpg" alt="imagem rio">
+          <div class="absolute inset-0 bg-white/20 backdrop-blur-sm"></div>
+          <div class="swiper-description absolute flex flex-col gap-8 z-100">
+            <h2 class="font-serif text-6xl">Transforme seus sonhos em destinos.</h2>
+            <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla dolores aliquid quos minima soluta ut blanditiis voluptate ab quidem, consequatur perferendis. Fugiat, tempore pariatur? Alias tempora accusamus dolores ab recusandae?</p>
+            <button class="w-[50%] self-center p-2 bg-[#ffffff80] rounded-lg backdrop-blur-sm">Conheça</button>
+          </div>
         </div>
       </div>
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
+      <!-- <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div> -->
     </div>
   </main>
 </body>
