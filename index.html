@@ -20,7 +20,41 @@
   <script src="script.js" defer></script>
   <title>Altavia</title>
 </head>
-<body class="w-full">
-  
+<body class="relative w-screen">
+  <!--header-->
+  <header class="fixed w-full left-0 top-0 py-8 px-32 flex justify-between bg-transparent z-50">
+    <h1 class="font-bold tracking-widest text-xl">Altavia</h1>
+    <nav>
+      <ul class="flex gap-8">
+        <li class="cursor-pointer">Home</li>
+        <li class="cursor-pointer">Top Destinations</li>
+        <li class="cursor-pointer">News</li>
+        <li class="cursor-pointer">Testimonials</li>
+        <li class="cursor-pointer">Contact Us</li>
+      </ul>
+    </nav>
+  </header>
+  <!--conteúdo principal-->
+  <main class="relative top-0 left-0 w-full h-screen z-0">
+    <!--swiper-->
+    <div class="swiper w-full h-full">
+      <div class="swiper-wrapper w-full h-full">
+        <div class="swiper-slide w-full h-full" id="1">
+          <img class="object-cover w-full h-full" src="assets/bahamas.jpg" alt="imagem bahamas">
+        </div>
+        <div class="swiper-slide" id="1">
+          <img class="object-cover w-full h-full" src="assets/finland.jpg" alt="imagem finlândia">
+        </div>
+        <div class="swiper-slide" id="1">
+          <img class="object-cover w-full h-full" src="assets/maldivas.jpg" alt="imagem maldivas">
+        </div>
+        <div class="swiper-slide" id="1">
+          <img class="object-cover w-full h-full" src="assets/rio-de-janeiro.jpg" alt="imagem rio">
+        </div>
+      </div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </main>
 </body>
 </html>
