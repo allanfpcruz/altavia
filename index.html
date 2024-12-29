@@ -29,7 +29,7 @@
       <i class='bx bx-map-alt text-[28px]'></i>
       <h1 class="font-bold tracking-widest text-xl">Altavia</h1>
     </a>
-    <nav class="py-6 px-16 bg-[#ffffff80] rounded-3xl backdrop-blur-sm">
+    <nav class="py-6 px-16 bg-white/40 rounded-3xl backdrop-blur-sm">
       <ul class="flex gap-8">
         <li class="cursor-pointer">Home</li>
         <li class="cursor-pointer">Top Destinations</li>
@@ -43,7 +43,7 @@
     </button>
   </header>
   <!--conteúdo principal-->
-  <main class="relative top-0 left-0 w-full z-0">
+  <main class="relative top-0 left-0 w-screen z-0">
     <!--swiper-->
     <div class="swiper w-full h-screen">
       <div class="swiper-wrapper w-full h-full">
@@ -152,8 +152,135 @@
           </div>
         </div>
       </div>
-      <!-- <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div> -->
+    </div>
+    <div class="top-destinations w-full flex flex-col gap-8 mt-16 px-32">
+      <div class="top flex flex-row justify-between">
+        <h2 class="text-2xl font-bold">Explore The Most Visited Places</h2>
+        <div class="buttons flex gap-2">
+          <button class="bg-gray h-10 w-10 rounded-full">
+            <i class='bx bx-chevron-left text-2xl text-darkGray'></i>
+          </button>
+          <button class="bg-yellow h-10 w-10 rounded-full">
+            <i class='bx bx-chevron-right text-2xl'></i>
+          </button>
+        </div>
+      </div>
+      <div class="cards-container w-full flex gap-4">
+        <div class="card w-1/4 flex flex-col gap-2">
+          <img src="assets/bahamas.jpg" alt="bahamas" class="h-80 rounded-3xl object-cover">
+          <h5 class="text-lg font-bold">Bahamas</h5>
+          <div class="price">
+            <p class="flex flex-row justify-between">
+              <span class="from flex items-center gap-2">
+                <span class="text-[12px] text-red">from</span>
+                <span class="text-[14px] text-red line-through">$1990</span>
+              </span>
+              <span class="to flex items-center gap-2">
+                <span class="text-md text-geen">to</span>
+                <span class="text-lg text-geen font-bold">$1590</span>
+              </span>
+            </p>
+          </div>
+          <div class="desc flex flex-row justify-between">
+            <div class="time flex flex-row items-center gap-2">
+              <i class='bx bx-calendar text-yellow'></i>
+              <p class="text-sm text-yellow">Avaible</p>
+            </div>
+            <div class="hotel flex flex-row items-center gap-2">
+              <i class='bx bxs-hotel text-yellow' ></i>
+              <p class="text-sm text-yellow">Hotel inclused</p>
+            </div>
+          </div>
+          <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+        <div class="card w-1/4 flex flex-col gap-2">
+          <img src="assets/bahamas.jpg" alt="bahamas" class="h-80 rounded-3xl object-cover">
+          <h5 class="text-lg font-bold">Bahamas</h5>
+          <div class="price">
+            <p class="flex flex-row justify-between">
+              <span class="from flex items-center gap-2">
+                <span class="text-[12px] text-red">from</span>
+                <span class="text-[14px] text-red line-through">$1990</span>
+              </span>
+              <span class="to flex items-center gap-2">
+                <span class="text-md text-geen">to</span>
+                <span class="text-lg text-geen font-bold">$1590</span>
+              </span>
+            </p>
+          </div>
+          <div class="desc flex flex-row justify-between">
+            <div class="time flex flex-row items-center gap-2">
+              <i class='bx bx-calendar text-yellow'></i>
+              <p class="text-sm text-yellow">Avaible</p>
+            </div>
+            <div class="hotel flex flex-row items-center gap-2">
+              <i class='bx bxs-hotel text-yellow' ></i>
+              <p class="text-sm text-yellow">Hotel inclused</p>
+            </div>
+          </div>
+          <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+        <div class="card w-1/4 flex flex-col gap-2">
+          <img src="assets/bahamas.jpg" alt="bahamas" class="h-80 rounded-3xl object-cover">
+          <h5 class="text-lg font-bold">Bahamas</h5>
+          <div class="price">
+            <p class="flex flex-row justify-between">
+              <span class="from flex items-center gap-2">
+                <span class="text-[12px] text-red">from</span>
+                <span class="text-[14px] text-red line-through">$1990</span>
+              </span>
+              <span class="to flex items-center gap-2">
+                <span class="text-md text-geen">to</span>
+                <span class="text-lg text-geen font-bold">$1590</span>
+              </span>
+            </p>
+          </div>
+          <div class="desc flex flex-row justify-between">
+            <div class="time flex flex-row items-center gap-2">
+              <i class='bx bx-calendar text-yellow'></i>
+              <p class="text-sm text-yellow">Avaible</p>
+            </div>
+            <div class="hotel flex flex-row items-center gap-2">
+              <i class='bx bxs-hotel text-yellow' ></i>
+              <p class="text-sm text-yellow">Hotel inclused</p>
+            </div>
+          </div>
+          <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+        <div class="card w-1/4 flex flex-col gap-2">
+          <img src="assets/bahamas.jpg" alt="bahamas" class="h-80 rounded-3xl object-cover">
+          <h5 class="text-lg font-bold">Bahamas</h5>
+          <div class="price">
+            <p class="flex flex-row justify-between">
+              <span class="from flex items-center gap-2">
+                <span class="text-[12px] text-red">from</span>
+                <span class="text-[14px] text-red line-through">$1990</span>
+              </span>
+              <span class="to flex items-center gap-2">
+                <span class="text-md text-geen">to</span>
+                <span class="text-lg text-geen font-bold">$1590</span>
+              </span>
+            </p>
+          </div>
+          <div class="desc flex flex-row justify-between">
+            <div class="time flex flex-row items-center gap-2">
+              <i class='bx bx-calendar text-yellow'></i>
+              <p class="text-sm text-yellow">Avaible</p>
+            </div>
+            <div class="hotel flex flex-row items-center gap-2">
+              <i class='bx bxs-hotel text-yellow' ></i>
+              <p class="text-sm text-yellow">Hotel inclused</p>
+            </div>
+          </div>
+          <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+      </div>
+    </div>
+    <div class="separator">
+      <p>95</p>
+      <p>anos de mercado</p>
+      <p>+2.000</p>
+      <p>clientes satisfeitos</p>
     </div>
   </main>
 </body>

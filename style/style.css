@@ -9,7 +9,8 @@
 }
 
 body, html {
-  width: 100%
+  width: 100%;
+  overflow-x: hidden
 }
 
 header nav ul li {
@@ -58,4 +59,9 @@ header button.login:hover {
 .swiper .swiper-wrapper .swiper-slide .swiper-description button:hover,
 .swiper .swiper-wrapper .swiper-slide .swiper-description .description-right button:hover {
   background: #ffffff80;
+}
+
+.separator {
+  background: url(../assets/finland.jpg) center center no-repeat fixed;
+  background-size: cover;
 }
