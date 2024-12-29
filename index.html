@@ -29,7 +29,7 @@
       <i class='bx bx-map-alt text-[28px]'></i>
       <h1 class="font-bold tracking-widest text-xl">Altavia</h1>
     </a>
-    <nav class="py-6 px-24 bg-[#ffffff80] rounded-lg backdrop-blur-sm">
+    <nav class="py-6 px-32 bg-[#ffffff80] rounded-lg backdrop-blur-sm">
       <ul class="flex gap-8">
         <li class="cursor-pointer">Home</li>
         <li class="cursor-pointer">Top Destinations</li>
@@ -50,10 +50,18 @@
         <div class="swiper-slide relative w-full h-full" id="1">
           <img class="object-cover w-full h-full" src="assets/bahamas.jpg" alt="imagem bahamas">
           <div class="absolute inset-0 bg-white/20 backdrop-blur-sm"></div>
-          <div class="swiper-description absolute flex flex-col gap-8 z-100">
-            <h2 class="font-serif text-6xl">Transforme seus sonhos em destinos.</h2>
-            <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla dolores aliquid quos minima soluta ut blanditiis voluptate ab quidem, consequatur perferendis. Fugiat, tempore pariatur? Alias tempora accusamus dolores ab recusandae?</p>
-            <button class="w-[50%] self-center p-2 bg-[#ffffff80] rounded-lg backdrop-blur-sm">Conheça</button>
+          <div class="swiper-description w-2/3 absolute flex flex-row gap-8 z-100">
+            <div class="description-left w-1/2 flex flex-col gap-8">
+              <div class="input flex items-center p-2 border rounded-3xl">
+                <label for="search" class="flex items-center px-2 border-r mr-2">
+                  <i class='bx bx-search text-lg text-white'></i>
+                </label>
+                <input type="text" id="search" class="w-full bg-transparent">
+              </div>
+              <h2 class="font-serif text-4xl text-white">Transforme seus sonhos em destinos.</h2>
+              <p class="text-sm text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla dolores aliquid quos minima soluta ut blanditiis voluptate ab quidem, consequatur perferendis. Fugiat, tempore pariatur? Alias tempora accusamus dolores ab recusandae?</p>
+              <button class="w-1/2 p-2 rounded-3xl backdrop-blur-sm border text-white">Conheça</button>
+            </div>
           </div>
         </div>
         <div class="swiper-slide" id="2">
