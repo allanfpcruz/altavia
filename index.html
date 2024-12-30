@@ -10,6 +10,8 @@
   <!--SwipperJS-->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!--ProgressBarJs-->
+  <script src="js/progressbar.min.js"></script>
   <!--Google fonts-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,7 +24,7 @@
   <script src="script.js" defer></script>
   <title>Altavia</title>
 </head>
-<body class="relative w-screen">
+<body class="relative">
   <!--header-->
   <header class="fixed w-full left-0 top-0 py-2 px-32 flex justify-between items-center z-50">
     <a href="" class="title flex items-center gap-4 text-white">
@@ -43,7 +45,7 @@
     </button>
   </header>
   <!--conteúdo principal-->
-  <main class="relative top-0 left-0 w-screen z-0">
+  <main class="relative top-0 left-0 w-full z-0">
     <!--swiper-->
     <div class="swiper w-full h-screen">
       <div class="swiper-wrapper w-full h-full">
@@ -52,8 +54,8 @@
           <div class="absolute inset-0 bg-white/20 backdrop-blur-sm"></div>
           <div class="swiper-description px-32 w-full absolute flex flex-row items-center justify-between gap-16 z-100">
             <div class="description-left w-3/6 flex flex-col gap-8">
-              <div class="input flex items-center p-2 border rounded-3xl backdrop-blur-lg">
-                <label for="search" class="flex items-center px-2 border-r mr-2">
+              <div class="input flex items-center p-2 border border-white rounded-3xl backdrop-blur-lg">
+                <label for="search" class="flex items-center px-2 border-r border-white mr-2">
                   <i class='bx bx-search text-lg text-white'></i>
                 </label>
                 <input type="text" id="search" class="w-full bg-transparent text-white">
@@ -78,8 +80,8 @@
           <div class="absolute inset-0 bg-white/20 backdrop-blur-sm"></div>
           <div class="swiper-description px-32 w-full absolute flex flex-row items-center justify-between gap-16 z-100">
             <div class="description-left w-3/6 flex flex-col gap-8">
-              <div class="input flex items-center p-2 border rounded-3xl backdrop-blur-lg">
-                <label for="search" class="flex items-center px-2 border-r mr-2">
+              <div class="input flex items-center p-2 border  border-white rounded-3xl backdrop-blur-lg">
+                <label for="search" class="flex items-center px-2 border-r border-white  mr-2">
                   <i class='bx bx-search text-lg text-white'></i>
                 </label>
                 <input type="text" id="search" class="w-full bg-transparent text-white">
@@ -104,8 +106,8 @@
           <div class="absolute inset-0 bg-white/20 backdrop-blur-sm"></div>
           <div class="swiper-description px-32 w-full absolute flex flex-row items-center justify-between gap-16 z-100">
             <div class="description-left w-3/6 flex flex-col gap-8">
-              <div class="input flex items-center p-2 border rounded-3xl backdrop-blur-lg">
-                <label for="search" class="flex items-center px-2 border-r mr-2">
+              <div class="input flex items-center p-2 border border-white rounded-3xl backdrop-blur-lg">
+                <label for="search" class="flex items-center px-2 border-r border-white mr-2">
                   <i class='bx bx-search text-lg text-white'></i>
                 </label>
                 <input type="text" id="search" class="w-full bg-transparent text-white">
@@ -130,8 +132,8 @@
           <div class="absolute inset-0 bg-white/20 backdrop-blur-sm"></div>
           <div class="swiper-description px-32 w-full absolute flex flex-row items-center justify-between gap-16 z-100">
             <div class="description-left w-3/6 flex flex-col gap-8">
-              <div class="input flex items-center p-2 border rounded-3xl backdrop-blur-lg">
-                <label for="search" class="flex items-center px-2 border-r mr-2">
+              <div class="input flex items-center p-2 border border-white rounded-3xl backdrop-blur-lg">
+                <label for="search" class="flex items-center px-2 border-r border-white mr-2">
                   <i class='bx bx-search text-lg text-white'></i>
                 </label>
                 <input type="text" id="search" class="w-full bg-transparent text-white">
@@ -153,7 +155,8 @@
         </div>
       </div>
     </div>
-    <div class="top-destinations w-full flex flex-col gap-8 mt-16 px-32">
+    <!--top destinations-->
+    <div class="top-destinations w-full flex flex-col gap-8 my-16 px-32">
       <div class="top flex flex-row justify-between">
         <h2 class="text-2xl font-bold">Explore The Most Visited Places</h2>
         <div class="buttons flex gap-2">
@@ -165,122 +168,215 @@
           </button>
         </div>
       </div>
-      <div class="cards-container w-full flex gap-4">
-        <div class="card w-1/4 flex flex-col gap-2">
-          <img src="assets/bahamas.jpg" alt="bahamas" class="h-80 rounded-3xl object-cover">
-          <h5 class="text-lg font-bold">Bahamas</h5>
-          <div class="price">
-            <p class="flex flex-row justify-between">
-              <span class="from flex items-center gap-2">
-                <span class="text-[12px] text-red">from</span>
-                <span class="text-[14px] text-red line-through">$1990</span>
-              </span>
-              <span class="to flex items-center gap-2">
-                <span class="text-md text-geen">to</span>
-                <span class="text-lg text-geen font-bold">$1590</span>
-              </span>
-            </p>
-          </div>
-          <div class="desc flex flex-row justify-between">
-            <div class="time flex flex-row items-center gap-2">
-              <i class='bx bx-calendar text-yellow'></i>
-              <p class="text-sm text-yellow">Avaible</p>
+      <div class="cards-container w-full flex gap-8">
+        <div class="card w-1/4 flex flex-col gap-2 p-2 shadow-cardShadow rounded-3xl cursor-pointer">
+          <img src="assets/bahamas.jpg" alt="bahamas" class="h-80 rounded-2xl object-cover">
+          <div class="card-bottom p-2">
+            <h5 class="text-lg font-bold">Bahamas</h5>
+            <div class="price">
+              <p class="flex flex-row justify-between">
+                <span class="from flex items-center gap-2">
+                  <span class="text-[12px] text-red">from</span>
+                  <span class="text-[14px] text-red line-through">$1990</span>
+                </span>
+                <span class="to flex items-center gap-2">
+                  <span class="text-md text-geen">to</span>
+                  <span class="text-lg text-geen font-bold">$1590</span>
+                </span>
+              </p>
             </div>
-            <div class="hotel flex flex-row items-center gap-2">
-              <i class='bx bxs-hotel text-yellow' ></i>
-              <p class="text-sm text-yellow">Hotel inclused</p>
+            <div class="desc flex flex-row justify-between">
+              <div class="time flex flex-row items-center gap-2">
+                <i class='bx bx-calendar text-yellow'></i>
+                <p class="text-sm text-yellow">Avaible</p>
+              </div>
+              <div class="hotel flex flex-row items-center gap-2">
+                <i class='bx bxs-hotel text-yellow' ></i>
+                <p class="text-sm text-yellow">Hotel inclused</p>
+              </div>
             </div>
+            <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
           </div>
-          <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
         </div>
-        <div class="card w-1/4 flex flex-col gap-2">
-          <img src="assets/bahamas.jpg" alt="bahamas" class="h-80 rounded-3xl object-cover">
-          <h5 class="text-lg font-bold">Bahamas</h5>
-          <div class="price">
-            <p class="flex flex-row justify-between">
-              <span class="from flex items-center gap-2">
-                <span class="text-[12px] text-red">from</span>
-                <span class="text-[14px] text-red line-through">$1990</span>
-              </span>
-              <span class="to flex items-center gap-2">
-                <span class="text-md text-geen">to</span>
-                <span class="text-lg text-geen font-bold">$1590</span>
-              </span>
-            </p>
-          </div>
-          <div class="desc flex flex-row justify-between">
-            <div class="time flex flex-row items-center gap-2">
-              <i class='bx bx-calendar text-yellow'></i>
-              <p class="text-sm text-yellow">Avaible</p>
+        <div class="card w-1/4 flex flex-col gap-2 p-2 shadow-cardShadow rounded-3xl cursor-pointer">
+          <img src="assets/bahamas.jpg" alt="bahamas" class="h-80 rounded-2xl object-cover">
+          <div class="card-bottom p-2">
+            <h5 class="text-lg font-bold">Bahamas</h5>
+            <div class="price">
+              <p class="flex flex-row justify-between">
+                <span class="from flex items-center gap-2">
+                  <span class="text-[12px] text-red">from</span>
+                  <span class="text-[14px] text-red line-through">$1990</span>
+                </span>
+                <span class="to flex items-center gap-2">
+                  <span class="text-md text-geen">to</span>
+                  <span class="text-lg text-geen font-bold">$1590</span>
+                </span>
+              </p>
             </div>
-            <div class="hotel flex flex-row items-center gap-2">
-              <i class='bx bxs-hotel text-yellow' ></i>
-              <p class="text-sm text-yellow">Hotel inclused</p>
+            <div class="desc flex flex-row justify-between">
+              <div class="time flex flex-row items-center gap-2">
+                <i class='bx bx-calendar text-yellow'></i>
+                <p class="text-sm text-yellow">Avaible</p>
+              </div>
+              <div class="hotel flex flex-row items-center gap-2">
+                <i class='bx bxs-hotel text-yellow' ></i>
+                <p class="text-sm text-yellow">Hotel inclused</p>
+              </div>
             </div>
+            <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
           </div>
-          <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
         </div>
-        <div class="card w-1/4 flex flex-col gap-2">
-          <img src="assets/bahamas.jpg" alt="bahamas" class="h-80 rounded-3xl object-cover">
-          <h5 class="text-lg font-bold">Bahamas</h5>
-          <div class="price">
-            <p class="flex flex-row justify-between">
-              <span class="from flex items-center gap-2">
-                <span class="text-[12px] text-red">from</span>
-                <span class="text-[14px] text-red line-through">$1990</span>
-              </span>
-              <span class="to flex items-center gap-2">
-                <span class="text-md text-geen">to</span>
-                <span class="text-lg text-geen font-bold">$1590</span>
-              </span>
-            </p>
-          </div>
-          <div class="desc flex flex-row justify-between">
-            <div class="time flex flex-row items-center gap-2">
-              <i class='bx bx-calendar text-yellow'></i>
-              <p class="text-sm text-yellow">Avaible</p>
+        <div class="card w-1/4 flex flex-col gap-2 p-2 shadow-cardShadow rounded-3xl cursor-pointer">
+          <img src="assets/bahamas.jpg" alt="bahamas" class="h-80 rounded-2xl object-cover">
+          <div class="card-bottom p-2">
+            <h5 class="text-lg font-bold">Bahamas</h5>
+            <div class="price">
+              <p class="flex flex-row justify-between">
+                <span class="from flex items-center gap-2">
+                  <span class="text-[12px] text-red">from</span>
+                  <span class="text-[14px] text-red line-through">$1990</span>
+                </span>
+                <span class="to flex items-center gap-2">
+                  <span class="text-md text-geen">to</span>
+                  <span class="text-lg text-geen font-bold">$1590</span>
+                </span>
+              </p>
             </div>
-            <div class="hotel flex flex-row items-center gap-2">
-              <i class='bx bxs-hotel text-yellow' ></i>
-              <p class="text-sm text-yellow">Hotel inclused</p>
+            <div class="desc flex flex-row justify-between">
+              <div class="time flex flex-row items-center gap-2">
+                <i class='bx bx-calendar text-yellow'></i>
+                <p class="text-sm text-yellow">Avaible</p>
+              </div>
+              <div class="hotel flex flex-row items-center gap-2">
+                <i class='bx bxs-hotel text-yellow' ></i>
+                <p class="text-sm text-yellow">Hotel inclused</p>
+              </div>
             </div>
+            <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
           </div>
-          <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
         </div>
-        <div class="card w-1/4 flex flex-col gap-2">
-          <img src="assets/bahamas.jpg" alt="bahamas" class="h-80 rounded-3xl object-cover">
-          <h5 class="text-lg font-bold">Bahamas</h5>
-          <div class="price">
-            <p class="flex flex-row justify-between">
-              <span class="from flex items-center gap-2">
-                <span class="text-[12px] text-red">from</span>
-                <span class="text-[14px] text-red line-through">$1990</span>
-              </span>
-              <span class="to flex items-center gap-2">
-                <span class="text-md text-geen">to</span>
-                <span class="text-lg text-geen font-bold">$1590</span>
-              </span>
-            </p>
-          </div>
-          <div class="desc flex flex-row justify-between">
-            <div class="time flex flex-row items-center gap-2">
-              <i class='bx bx-calendar text-yellow'></i>
-              <p class="text-sm text-yellow">Avaible</p>
+        <div class="card w-1/4 flex flex-col gap-2 p-2 shadow-cardShadow rounded-3xl cursor-pointer">
+          <img src="assets/bahamas.jpg" alt="bahamas" class="h-80 rounded-2xl object-cover">
+          <div class="card-bottom p-2">
+            <h5 class="text-lg font-bold">Bahamas</h5>
+            <div class="price">
+              <p class="flex flex-row justify-between">
+                <span class="from flex items-center gap-2">
+                  <span class="text-[12px] text-red">from</span>
+                  <span class="text-[14px] text-red line-through">$1990</span>
+                </span>
+                <span class="to flex items-center gap-2">
+                  <span class="text-md text-geen">to</span>
+                  <span class="text-lg text-geen font-bold">$1590</span>
+                </span>
+              </p>
             </div>
-            <div class="hotel flex flex-row items-center gap-2">
-              <i class='bx bxs-hotel text-yellow' ></i>
-              <p class="text-sm text-yellow">Hotel inclused</p>
+            <div class="desc flex flex-row justify-between">
+              <div class="time flex flex-row items-center gap-2">
+                <i class='bx bx-calendar text-yellow'></i>
+                <p class="text-sm text-yellow">Avaible</p>
+              </div>
+              <div class="hotel flex flex-row items-center gap-2">
+                <i class='bx bxs-hotel text-yellow' ></i>
+                <p class="text-sm text-yellow">Hotel inclused</p>
+              </div>
             </div>
+            <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
           </div>
-          <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
         </div>
       </div>
     </div>
-    <div class="separator">
-      <p>95</p>
-      <p>anos de mercado</p>
-      <p>+2.000</p>
-      <p>clientes satisfeitos</p>
+    <!--separator/infos-->
+    <div class="separator flex flex-row justify-around py-16">
+      <div class="circle-box flex flex-col items-center gap-4">
+        <div class="circle-container relative h-56 w-56">
+          <div class="absolute inset-0 backdrop-blur-lg rounded-full"></div>
+          <svg class="absolute top-0 left-0 w-full h-full" viewBox="0 0 120 120">
+            <circle
+              cx="60"
+              cy="60"
+              r="57"
+              stroke="#3b82f6"
+              stroke-width="5"
+              fill="none"
+              stroke-dasharray="390"
+              stroke-dashoffset="0"
+              style="transition: stroke-dashoffset 0.3s;"
+            />
+          </svg>
+          <div class="absolute top-0 left-0 w-full h-full flex items-center justify-center">
+            <span class="text-xl font-bold text-white">+90</span>
+          </div>
+        </div>
+        <p class="text-white text-2xl text-center font-bold">Anos de <br> Mercado</p>
+      </div>
+      <div class="circle-box flex flex-col items-center gap-4">
+        <div class="circle-container relative h-56 w-56">
+          <div class="absolute inset-0 backdrop-blur-lg rounded-full"></div>
+          <svg class="absolute top-0 left-0 w-full h-full" viewBox="0 0 120 120">
+            <circle
+              cx="60"
+              cy="60"
+              r="57"
+              stroke="#3b82f6"
+              stroke-width="5"
+              fill="none"
+              stroke-dasharray="390"
+              stroke-dashoffset="0"
+              style="transition: stroke-dashoffset 0.3s;"
+            />
+          </svg>
+          <div class="absolute top-0 left-0 w-full h-full flex items-center justify-center">
+            <span class="text-6xl font-bold text-white">+750</span>
+          </div>
+        </div>
+        <p class="text-white text-2xl text-center font-bold">Pacotes de <br> Viagem</p>
+      </div>
+      <div class="circle-box flex flex-col items-center gap-4">
+        <div class="circle-container relative h-56 w-56">
+          <div class="absolute inset-0 backdrop-blur-lg rounded-full"></div>
+          <svg class="absolute top-0 left-0 w-full h-full" viewBox="0 0 120 120">
+            <circle
+              cx="60"
+              cy="60"
+              r="57"
+              stroke="#3b82f6"
+              stroke-width="5"
+              fill="none"
+              stroke-dasharray="390"
+              stroke-dashoffset="0"
+              style="transition: stroke-dashoffset 0.3s;"
+            />
+          </svg>
+          <div class="absolute top-0 left-0 w-full h-full flex items-center justify-center">
+            <span class="text-6xl font-bold text-white">2350</span>
+          </div>
+        </div>
+        <p class="text-white text-2xl text-center font-bold">Hotéis <br> 5 Estrelas</p>
+      </div>
+      <div class="circle-box flex flex-col items-center gap-4">
+        <div class="circle-container relative h-56 w-56">
+          <div class="absolute inset-0 backdrop-blur-lg rounded-full"></div>
+          <svg class="absolute top-0 left-0 w-full h-full" viewBox="0 0 120 120">
+            <circle
+              cx="60"
+              cy="60"
+              r="57"
+              stroke="#3b82f6"
+              stroke-width="5"
+              fill="none"
+              stroke-dasharray="390"
+              stroke-dashoffset="0"
+              style="transition: stroke-dashoffset 0.3s;"
+            />
+          </svg>
+          <div class="absolute top-0 left-0 w-full h-full flex items-center justify-center">
+            <span class="text-6xl font-bold text-white">15Mil</span>
+          </div>
+        </div>
+        <p class="text-white text-2xl text-center font-bold">Clientes <br> Satisfeitos</p>
+      </div>
     </div>
   </main>
 </body>

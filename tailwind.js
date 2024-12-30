@@ -8,7 +8,7 @@ tailwind.config = {
       colors: {
         beige: "#BFA980",
         lightBeige: "#F3EAC9",
-        blue: "#4A5B63",
+        blue: "#0000ff",
         lightBlue: "#A9CDD4",
         yellow: "#ffaa00",
         red: "#ff0000",
@@ -18,6 +18,9 @@ tailwind.config = {
       },
       backgroundImage: {
         "header-gradient": "linear-gradient(to bottom, #ffffff, transparent)"
+      },
+      boxShadow: {
+        cardShadow: "2px 2px 15px rgba(0, 0, 0, .2)"
       }
     }
   }
