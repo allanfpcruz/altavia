@@ -65,7 +65,8 @@ header button.login:hover {
 .top-destinations .cards-container .card,
 .dont-worry button,
 .swiper .swiper-wrapper .swiper-slide .swiper-description button,
-header button.login {
+header button.login,
+.do-you-know button {
   transition: all .3s ease;
 }
 
@@ -78,7 +79,13 @@ header button.login {
   background-size: cover;
 }
 
-.dont-worry button:hover {
+.do-you-know {
+  background: url(../assets/maldivas.jpg) center center no-repeat fixed;
+  background-size: cover;
+}
+
+.dont-worry button:hover,
+.do-you-know button:hover {
   background: #000;
   color: #fff;
 }
