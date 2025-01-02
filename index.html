@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <!--ProgressBarJs-->
-  <script src="js/progressbar.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/progressbar.js"></script>
   <!--Google fonts-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,20 +24,20 @@
   <script src="script.js" defer></script>
   <title>Altavia</title>
 </head>
-<body class="relative">
+<body class="relative bg-bodyBackground">
   <!--header-->
-  <header class="fixed w-full left-0 top-0 py-2 px-32 flex justify-between items-center z-50">
+  <header class="fixed left-32 top-2 py-2 px-4 flex justify-between items-center bg-white/40 rounded-3xl backdrop-blur-sm z-50">
     <a href="" class="title flex items-center gap-4 text-white">
       <i class='bx bx-map-alt text-[28px]'></i>
       <h1 class="font-bold tracking-widest text-xl">Altavia</h1>
     </a>
-    <nav class="py-6 px-16 bg-white/40 rounded-3xl backdrop-blur-sm">
+    <nav class="py-6 px-16 ">
       <ul class="flex gap-8">
-        <li class="cursor-pointer">Home</li>
-        <li class="cursor-pointer">Top Destinations</li>
-        <li class="cursor-pointer">News</li>
-        <li class="cursor-pointer">Testimonials</li>
-        <li class="cursor-pointer">Contact Us</li>
+        <li class="cursor-pointer text-white">Home</li>
+        <li class="cursor-pointer text-white">Top Destinations</li>
+        <li class="cursor-pointer text-white">News</li>
+        <li class="cursor-pointer text-white">Testimonials</li>
+        <li class="cursor-pointer text-white">Contact Us</li>
       </ul>
     </nav>
     <button class="login flex items-center justify-center w-12 h-12 p-4 border rounded-full backdrop-blur-lg text-4xl text-white cursor-pointer">
@@ -169,7 +169,7 @@
         </div>
       </div>
       <div class="cards-container w-full flex gap-8">
-        <div class="card w-1/4 flex flex-col gap-2 p-2 shadow-cardShadow rounded-3xl cursor-pointer">
+        <div class="card w-1/4 flex flex-col gap-2 p-2 bg-white shadow-cardShadow rounded-3xl cursor-pointer">
           <img src="assets/bahamas.jpg" alt="bahamas" class="h-80 rounded-2xl object-cover">
           <div class="card-bottom p-2">
             <h5 class="text-lg font-bold">Bahamas</h5>
@@ -198,7 +198,7 @@
             <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
           </div>
         </div>
-        <div class="card w-1/4 flex flex-col gap-2 p-2 shadow-cardShadow rounded-3xl cursor-pointer">
+        <div class="card w-1/4 flex flex-col gap-2 p-2 bg-white shadow-cardShadow rounded-3xl cursor-pointer">
           <img src="assets/bahamas.jpg" alt="bahamas" class="h-80 rounded-2xl object-cover">
           <div class="card-bottom p-2">
             <h5 class="text-lg font-bold">Bahamas</h5>
@@ -227,7 +227,7 @@
             <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
           </div>
         </div>
-        <div class="card w-1/4 flex flex-col gap-2 p-2 shadow-cardShadow rounded-3xl cursor-pointer">
+        <div class="card w-1/4 flex flex-col gap-2 p-2 bg-white shadow-cardShadow rounded-3xl cursor-pointer">
           <img src="assets/bahamas.jpg" alt="bahamas" class="h-80 rounded-2xl object-cover">
           <div class="card-bottom p-2">
             <h5 class="text-lg font-bold">Bahamas</h5>
@@ -256,7 +256,7 @@
             <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
           </div>
         </div>
-        <div class="card w-1/4 flex flex-col gap-2 p-2 shadow-cardShadow rounded-3xl cursor-pointer">
+        <div class="card w-1/4 flex flex-col gap-2 p-2 bg-white shadow-cardShadow rounded-3xl cursor-pointer">
           <img src="assets/bahamas.jpg" alt="bahamas" class="h-80 rounded-2xl object-cover">
           <div class="card-bottom p-2">
             <h5 class="text-lg font-bold">Bahamas</h5>
@@ -290,95 +290,59 @@
     <!--separator/infos-->
     <div class="separator flex flex-row justify-around py-16">
       <div class="circle-box flex flex-col items-center gap-4">
-        <div class="circle-container relative h-56 w-56" id="circle-container-1">
+        <div class="circle-container relative h-56 w-56">
           <div class="absolute inset-0 backdrop-blur-lg rounded-full"></div>
-          <svg class="absolute top-0 left-0 w-full h-full" viewBox="0 0 120 120">
-            <circle
-              class="progress-circle"
-              cx="60"
-              cy="60"
-              r="57"
-              stroke="#3b82f6"
-              stroke-width="5"
-              fill="none"
-              stroke-dasharray="390"
-              stroke-dashoffset="390"
-              style="transition: stroke-dashoffset 0.3s;"
-            />
-          </svg>
-          <div class="absolute top-0 left-0 w-full h-full flex items-center justify-center">
-            <span class="progress-text text-6xl font-bold text-white">+0</span>
-          </div>
+          <div id="circle-container-1" class="circle z-50"></div>
         </div>
-        <p class="text-white text-2xl text-center font-bold">Anos de <br> Mercado</p>
-      </div>
-      <div class="circle-box flex flex-col items-center gap-4">
-        <div class="circle-container relative h-56 w-56" id="circle-container-2">
-          <div class="absolute inset-0 backdrop-blur-lg rounded-full"></div>
-          <svg class="absolute top-0 left-0 w-full h-full" viewBox="0 0 120 120">
-            <circle
-              class="progress-circle"
-              cx="60"
-              cy="60"
-              r="57"
-              stroke="#3b82f6"
-              stroke-width="5"
-              fill="none"
-              stroke-dasharray="390"
-              stroke-dashoffset="390"
-              style="transition: stroke-dashoffset 0.3s;"
-            />
-          </svg>
-          <div class="absolute top-0 left-0 w-full h-full flex items-center justify-center">
-            <span class="progress-text text-6xl font-bold text-white">+750</span>
-          </div>
-        </div>
-        <p class="text-white text-2xl text-center font-bold">Pacotes de <br> Viagem</p>
+        <p class="text-white text-2xl text-center font-bold font-serif">Anos de <br> Mercado</p>
       </div>
       <div class="circle-box flex flex-col items-center gap-4">
         <div class="circle-container relative h-56 w-56">
           <div class="absolute inset-0 backdrop-blur-lg rounded-full"></div>
-          <svg class="absolute top-0 left-0 w-full h-full" viewBox="0 0 120 120">
-            <circle
-              cx="60"
-              cy="60"
-              r="57"
-              stroke="#3b82f6"
-              stroke-width="5"
-              fill="none"
-              stroke-dasharray="390"
-              stroke-dashoffset="0"
-              style="transition: stroke-dashoffset 0.3s;"
-            />
-          </svg>
-          <div class="absolute top-0 left-0 w-full h-full flex items-center justify-center">
-            <span class="text-6xl font-bold text-white">2350</span>
-          </div>
+          <div id="circle-container-2" class="circle z-50"></div>
         </div>
-        <p class="text-white text-2xl text-center font-bold">Hotéis <br> 5 Estrelas</p>
+        <p class="text-white text-2xl text-center font-bold font-serif">Pacotes de <br> Viagem</p>
       </div>
       <div class="circle-box flex flex-col items-center gap-4">
         <div class="circle-container relative h-56 w-56">
           <div class="absolute inset-0 backdrop-blur-lg rounded-full"></div>
-          <svg class="absolute top-0 left-0 w-full h-full" viewBox="0 0 120 120">
-            <circle
-              cx="60"
-              cy="60"
-              r="57"
-              stroke="#3b82f6"
-              stroke-width="5"
-              fill="none"
-              stroke-dasharray="390"
-              stroke-dashoffset="0"
-              style="transition: stroke-dashoffset 0.3s;"
-            />
-          </svg>
-          <div class="absolute top-0 left-0 w-full h-full flex items-center justify-center">
-            <span class="text-6xl font-bold text-white">15Mil</span>
-          </div>
+          <div id="circle-container-3" class="circle z-50"></div>
         </div>
-        <p class="text-white text-2xl text-center font-bold">Clientes <br> Satisfeitos</p>
+        <p class="text-white text-2xl text-center font-bold font-serif">Hotéis 5 <br> Estrelas</p>
       </div>
+      <div class="circle-box flex flex-col items-center gap-4">
+        <div class="circle-container relative h-56 w-56">
+          <div class="absolute inset-0 backdrop-blur-lg rounded-full"></div>
+          <div id="circle-container-4" class="circle z-50"></div>
+        </div>
+        <p class="text-white text-2xl text-center font-bold font-serif">Clientes <br> Satisfeitos</p>
+      </div>
+    </div>
+    <!--dont worry-->
+    <div class="dont-worry flex gap-8 w-full h-screen px-32 py-16">
+      <div class="content w-1/2 flex flex-col gap-8">
+        <h2 class="font-bold text-2xl">Don't worry about the details</h2>
+        <div class="details flex flex-col gap-16">
+          <div class="car-location flex flex-col items-start gap-4">
+            <div class="header flex items-center gap-2">
+              <i class='bx bxs-car text-3xl'></i>
+              <h3 class="text-xl font-serif">Car location</h3>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur nisi iusto voluptatem labore aperiam consequuntur magni enim atque in eveniet autem hic molestias porro culpa laudantium repellat, perferendis doloremque dolor.</p>
+            <button class="rounded-3xl border px-4 py-2">Get it</button>
+          </div>
+          <div class="restaurants flex flex-col items-start gap-4">
+            <div class="header flex items-center gap-2">
+              <i class='bx bx-restaurant text-3xl'></i>
+              <h3 class="text-xl font-serif">Best Restaurants</h3>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur nisi iusto voluptatem labore aperiam.</p>
+            <button class="rounded-3xl border px-4 py-2">Let's go</button>
+          </div>
+          <div class="restaurants"></div>
+        </div>
+      </div>
+      <img src="assets/rio-de-janeiro.jpg" alt="rio image" class="w-1/2 object-cover rounded-3xl">
     </div>
   </main>
 </body>

@@ -15,6 +15,7 @@ tailwind.config = {
         geen: "#00ff00",
         gray: "#cccccc",
         darkGray: "#898989",
+        bodyBackground: "#eeeeee"
       },
       backgroundImage: {
         "header-gradient": "linear-gradient(to bottom, #ffffff, transparent)"

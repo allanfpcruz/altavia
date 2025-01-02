@@ -12,6 +12,16 @@ body, html {
   width: 100%;
 }
 
+header {
+  width: calc(100% - 256px);
+  transition: all .3s ease;
+}
+
+header:hover {
+  background: #eeeeee;
+  backdrop-filter: none;
+}
+
 header nav ul li {
   position: relative;
   transition: all .3s ease;
@@ -24,7 +34,7 @@ header nav ul li::after {
   left: 0;
   height: 2px;
   width: 50%;
-  background-color: #000;
+  background-color: #fff;
   opacity: 0;
   transform: scaleX(0);
   transform-origin: left;
@@ -34,10 +44,6 @@ header nav ul li::after {
 header nav ul li:hover::after {
   opacity: 1;
   transform: scaleX(1);
-}
-
-header button.login {
-  transition: all .3s ease;
 }
 
 header button.login:hover {
@@ -51,13 +57,16 @@ header button.login:hover {
   left: 50%;
 }
 
-.swiper .swiper-wrapper .swiper-slide .swiper-description button {
-  transition: all .3s ease;
-}
-
 .swiper .swiper-wrapper .swiper-slide .swiper-description button:hover,
 .swiper .swiper-wrapper .swiper-slide .swiper-description .description-right button:hover {
   background: #ffffff80;
+}
+
+.top-destinations .cards-container .card,
+.dont-worry button,
+.swiper .swiper-wrapper .swiper-slide .swiper-description button,
+header button.login {
+  transition: all .3s ease;
 }
 
 .top-destinations .cards-container .card:hover {
@@ -67,4 +76,9 @@ header button.login:hover {
 .separator {
   background: url(../assets/finland.jpg) center center no-repeat fixed;
   background-size: cover;
+}
+
+.dont-worry button:hover {
+  background: #000;
+  color: #fff;
 }
