@@ -3,13 +3,28 @@ document.addEventListener('DOMContentLoaded', () => {
   var swiper = new Swiper('.swiper', {
     direction: 'horizontal',
     loop: true,
-    pagination: {
-      el: '.swiper-pagination'
-    },
     autoplay: {
       delay: 3000,
       disableOnInteraction: false
     },
+  })
+  document.addEventListener('keydown', (e) => {
+    if(e.key === 'ArrowLeft') {
+      swiper.slidePrev()
+    } else if (e.key === 'ArrowRight') {
+      swiper.slideNext()
+    }
+  })  
+
+  var swiper = new Swiper('.swiper-separator', {
+    direction: 'horizontal',
+    slidesPerView: 5,
+    loop: true,
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: false,
+    },
+    speed: 2000,
   })
   document.addEventListener('keydown', (e) => {
     if(e.key === 'ArrowLeft') {
