@@ -26,13 +26,13 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     speed: 2000,
   })
-  document.addEventListener('keydown', (e) => {
-    if(e.key === 'ArrowLeft') {
-      swiper.slidePrev()
-    } else if (e.key === 'ArrowRight') {
-      swiper.slideNext()
-    }
-  })  
+
+  //iniciando AOSJs
+  AOS.init({
+    duration: 1000,
+    once: true,
+    offset: 200,
+})
 })
 
 //configurações da primeira progressbar

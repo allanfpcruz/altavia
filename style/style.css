@@ -67,7 +67,11 @@ header button.login:hover {
 .swiper .swiper-wrapper .swiper-slide .swiper-description button,
 header button.login,
 .do-you-know button,
-.testimonials .cards-container .card {
+.testimonials .cards-container .card,
+.message button,
+footer .top .right .col p,
+footer .bottom .icons > i,
+footer .bottom .icons > .circle {
   transition: all .3s ease;
 }
 
@@ -107,4 +111,18 @@ header button.login,
 
 .testimonials .cards-container .card:hover::before {
   box-shadow: 0px -10px 15px rgba(0, 0, 0, .1);
+}
+
+.message button:hover {
+  background: #0101be;
+}
+
+footer .top .right .col p:hover {
+  color: #4d4d4d;
+}
+
+footer .bottom .icons > i:hover,
+footer .bottom .icons > .circle:hover {
+  background: #000;
+  color: #fff;
 }
