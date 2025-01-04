@@ -1,3 +1,36 @@
+/*variáveis*/
+:root {
+  --body-bg: #eee;
+  --dark-body-bg: #ccc;
+  --footer-bg: #ccc;
+  --light-text: #fff;
+  --dark-text: #000;
+  --white: #fff;
+  --black: #000;
+  --gray: #ccc;
+  --dark-gray: #555;
+  --transparent: #ffffff40;
+  --slide-bg: #ffffff20;
+  --header-hover: #ccc;
+  --card-shadow: 2px 2px 15px rgba(0, 0, 0, .2);
+  --card-hover-shadow: 3px 3px 20px rgba(0, 0, 0, .3);
+}
+
+.dark {
+  --body-bg: #1b1b1b;
+  --dark-body-bg: #111111;
+  --footer-bg: #000;
+  --white: #000;
+  --black: #fff;
+  --gray: #444;
+  --dark-gray: #222;
+  --transparent: #00000070;
+  --slide-bg: #00000085;
+  --header-hover: #000;
+  --card-shadow: 1px 1px 10px rgba(255, 255, 255, .1);
+  --card-hover-shadow: 2px 2px 10px rgba(255, 255, 255, .2);
+}
+
 *{
   margin: 0;
   padding: 0;
@@ -12,13 +45,12 @@ body, html {
   width: 100%;
 }
 
-header {
+.header-container {
   width: calc(100% - 256px);
-  transition: background 0.3s ease, backdrop-filter 0.3s ease !important;
 }
 
 header:hover {
-  background: #ccc;
+  background: var(--header-hover);
   backdrop-filter: blur(0px);
 }
 
@@ -34,7 +66,7 @@ header nav ul li::after {
   left: 0;
   height: 2px;
   width: 50%;
-  background-color: #fff;
+  background-color: var(--light-text);
   opacity: 0;
   transform: scaleX(0);
   transform-origin: left;
@@ -46,9 +78,42 @@ header nav ul li:hover::after {
   transform: scaleX(1);
 }
 
-header button.login:hover {
-  background: #ffffff80;
-  backdrop-filter: blur(4px);
+header #theme-toggle {
+  display: none;
+}
+
+header .theme-toggle {
+  display: block;
+  min-width: 50px;
+  height: 25px;
+  background: var(--transparent);
+  cursor: pointer;
+  position: relative;
+  border-radius: 25px;
+}
+
+header .theme-toggle::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  bottom: 2px;
+  background: var(--slide-bg);
+  width: calc(25px - 4px);
+  border-radius: 50%;
+  transition: all .3s ease;
+}
+
+header:hover .theme-toggle {
+  background: var(--body-bg);
+}
+
+header:hover .theme-toggle::before {
+  background: var(--gray);
+}
+
+header #theme-toggle:checked+.theme-toggle::before {
+  left: calc(100% - (25px - 4px) - 2px);
 }
 
 .swiper .swiper-wrapper .swiper-slide .swiper-description {
@@ -64,7 +129,7 @@ header button.login:hover {
 
 .top-destinations .cards-container .card:hover,
 .testimonials .cards-container .card:hover {
-  box-shadow: 3px 3px 20px rgba(0, 0, 0, .3);
+  box-shadow: var(--card-hover-shadow);
 }
 
 .separator {
@@ -79,8 +144,8 @@ header button.login:hover {
 
 .dont-worry button:hover,
 .do-you-know button:hover {
-  background: #000;
-  color: #fff;
+  background: var(--black);
+  color: var(--white);
 }
 
 .testimonials .cards-container .card::before {
@@ -90,19 +155,19 @@ header button.login:hover {
   left: 107px;
   width: 74px;
   height: 36px;
-  background: #fff;
+  background: var(--white);
   border-radius: 37px 37px 0 0;
-  box-shadow: 0px -6px 10px rgba(0, 0, 0, .1);
+  box-shadow: 2px -2px 15px rgba(255, 255, 255, .1);
   transition: all .3s ease;
 }
 
 .testimonials .cards-container .card:hover::before {
-  box-shadow: 0px -10px 15px rgba(0, 0, 0, .1);
+  box-shadow: 2px -2px 15px rgba(255, 255, 255, .2);
 }
 
 .message input:focus-within,
 .message textarea:focus-within {
-  border: 1px solid #000;
+  border: 1px solid var(--black);
 }
 
 .message button:hover {
@@ -110,15 +175,20 @@ header button.login:hover {
 }
 
 footer .top .right .col p:hover {
-  color: #4d4d4d;
+  color: var(--dark-gray);
 }
 
 footer .bottom .icons > i:hover,
 footer .bottom .icons > .circle:hover {
-  background: #000;
-  color: #fff;
+  background: var(--black);
+  color: var(--white);
 }
 
+footer .bottom .icons > .circle:hover i {
+  color: var(--white);
+}
+
+header,
 .top-destinations .cards-container .card,
 .dont-worry button,
 .swiper .swiper-wrapper .swiper-slide .swiper-description button,

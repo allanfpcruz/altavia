@@ -11,6 +11,11 @@ links.forEach(link => {
   })
 })
 
+//mudar tema
+document.querySelector('#theme-toggle').addEventListener('click', (e) => {
+  document.documentElement.classList.toggle('dark')
+})
+
 //swiper
 var swiper1 = new Swiper('.swiper', {
   direction: 'horizontal',

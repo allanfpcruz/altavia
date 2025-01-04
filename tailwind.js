@@ -1,4 +1,5 @@
 tailwind.config = {
+  darkMode: 'class',
   theme: {
     extend: {
       fontFamily: {
@@ -6,6 +7,8 @@ tailwind.config = {
         serif: ['Chonburi', 'serif']
       },
       colors: {
+        white: "var(--white)",
+        black: "var(--black)",
         beige: "#BFA980",
         lightBeige: "#F3EAC9",
         blue: "#0000ff",
@@ -13,15 +16,20 @@ tailwind.config = {
         yellow: "#ffaa00",
         red: "#ff0000",
         geen: "#00ff00",
-        gray: "#cccccc",
+        gray: "var(--gray)",
         darkGray: "#898989",
-        bodyBackground: "#eeeeee"
+        bodyBackground: "var(--body-bg)",
+        darkBodyBackground: "var(--dark-body-bg)",
+        slideBackground: "var(--slide-bg)",
+        footerBackground: "var(--footer-bg)",
+        transparentBackground: "var(--transparent)",
+        lightText: "var(--light-text)",
       },
       backgroundImage: {
         "header-gradient": "linear-gradient(to bottom, #ffffff, transparent)"
       },
       boxShadow: {
-        cardShadow: "2px 2px 15px rgba(0, 0, 0, .2)"
+        cardShadow: "var(--card-shadow)",
       }
     }
   }
