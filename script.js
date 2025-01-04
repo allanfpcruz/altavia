@@ -1,38 +1,56 @@
-document.addEventListener('DOMContentLoaded', () => {
-  //swiper
-  var swiper = new Swiper('.swiper', {
-    direction: 'horizontal',
-    loop: true,
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false
-    },
-  })
-  document.addEventListener('keydown', (e) => {
-    if(e.key === 'ArrowLeft') {
-      swiper.slidePrev()
-    } else if (e.key === 'ArrowRight') {
-      swiper.slideNext()
-    }
-  })  
+//links do header
+const links = document.querySelectorAll('header nav ul li')
 
-  var swiper = new Swiper('.swiper-separator', {
-    direction: 'horizontal',
-    slidesPerView: 5,
-    loop: true,
-    autoplay: {
-      delay: 2000,
-      disableOnInteraction: false,
-    },
-    speed: 2000,
+links.forEach(link => {
+  link.addEventListener('click', () => {
+    const target = document.querySelector(link.dataset.target)
+    target.scrollIntoView({
+      behavior: 'smooth', // Scroll suave
+      block: 'start', // Alinha ao topo
+    })
   })
-
-  //iniciando AOSJs
-  AOS.init({
-    duration: 1000,
-    once: true,
-    offset: 200,
 })
+
+//swiper
+var swiper1 = new Swiper('.swiper', {
+  direction: 'horizontal',
+  loop: true,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false
+  },
+})
+document.addEventListener('keydown', (e) => {
+  if(e.key === 'ArrowLeft') {
+    swiper1.slidePrev()
+  } else if (e.key === 'ArrowRight') {
+    swiper1.slideNext()
+  }
+})
+document.addEventListener('focusin', (e) => {
+  console.log(e.target)
+  if(e.target.classList.contains('swiper-input')) swiper1.autoplay.pause()
+}) 
+document.addEventListener('focusout', (e) => {
+  if(e.target.classList.contains('swiper-input')) swiper1.autoplay.start()
+}) 
+
+var swiper2 = new Swiper('.swiper-separator', {
+  direction: 'horizontal',
+  slidesPerView: 5,
+  loop: true,
+  autoplay: {
+    delay: 2000,
+    disableOnInteraction: false,
+  },
+  speed: 2000,
+})
+
+//iniciando AOSJs
+AOS.init({
+  duration: 1000,
+  once: true,
+  offset: 200,
 })
 
 //configurações da primeira progressbar
@@ -206,3 +224,17 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: .3 })
 
 observer.observe(document.querySelector('.separator'))
+
+//EmailJs
+emailjs.init({
+  publicKey: 'LOcvMpDVKeekBsWwF'
+})
+
+const form = document.querySelector('#contact-form')
+form.addEventListener('submit', (e) => {
+  e.preventDefault()
+  emailjs.sendForm('contact_service', 'contact_form', form)
+    .then(() => console.log('SUCCESS: email sended'))
+    .catch((error) => console.error(`EMAIL FAILED: ${error}`))
+    .finally(() => form.reset())
+})
