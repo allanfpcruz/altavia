@@ -162,6 +162,10 @@ header #theme-toggle:checked+.theme-toggle::before {
 }
 
 .testimonials .cards-container .card:hover::before {
+  box-shadow: 2px -2px 15px rgba(0, 0, 0, .2);
+}
+
+html.dark .testimonials .cards-container .card:hover::before {
   box-shadow: 2px -2px 15px rgba(255, 255, 255, .2);
 }
 
