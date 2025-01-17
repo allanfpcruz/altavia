@@ -28,20 +28,21 @@
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <!--styles-->
   <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="style/mediaquery.css">
   <!--scripts-->
   <script src="script.js" defer></script>
   <title>Altavia</title>
 </head>
 <body class="relative bg-bodyBackground">
   <!--header-->
-  <div class="header-container fixed left-32 top-2 z-50" data-aos="fade-up">
-    <header class="w-full h-full py-2 px-4 flex justify-between items-center rounded-3xl bg-transparentBackground rounded-3xl backdrop-blur-sm">
+  <div class="header-container fixed xl:left-32 lg:left-24 md:left-8 left-4 top-2 z-50" data-aos="fade-up">
+    <header class="w-full h-full py-8 px-4 flex justify-between items-center rounded-3xl bg-transparentBackground rounded-3xl backdrop-blur-sm">
       <a href="" class="title flex items-center gap-4 text-lightText">
         <i class='bx bx-map-alt text-[28px]'></i>
         <h1 class="font-bold tracking-widest text-xl">Altavia</h1>
       </a>
-      <nav class="py-6 px-16 ">
-        <ul class="flex gap-8">
+      <nav class="lg:px-16 px-4">
+        <ul class="hidden sm:flex lg:gap-8 gap-4">
           <li class="cursor-pointer text-lightText" data-target="#home">Home</li>
           <li class="cursor-pointer text-lightText" data-target="#top-destinations">Top Destinations</li>
           <li class="cursor-pointer text-lightText" data-target="#news">News</li>
@@ -61,102 +62,102 @@
         <div class="swiper-slide" id="1">
           <img class="object-cover w-full h-full" src="assets/bahamas.jpg" alt="imagem bahamas">
           <div class="absolute inset-0 bg-slideBackground backdrop-blur-sm"></div>
-          <div class="swiper-description px-32 w-full absolute flex flex-row items-center justify-between gap-16 z-100">
-            <div class="description-left w-3/6 flex flex-col gap-8"  data-aos="fade-up">
-              <div class="input flex items-center p-2 border border-lightText rounded-3xl backdrop-blur-lg">
+          <div class="swiper-description xl:px-32 lg:px-24 md:px-8 px-4 w-full absolute flex flex-row items-center justify-between gap-8 md:gap-16 z-100">
+            <div class="description-left md:w-3/6 flex flex-col gap-8 items-center xm:items-start"  data-aos="fade-up">
+              <div class="input w-full flex items-center p-2 border border-lightText rounded-3xl backdrop-blur-lg">
                 <label for="search" class="flex items-center px-2 border-r border-lightText mr-2">
                   <i class='bx bx-search text-lg text-lightText'></i>
                 </label>
                 <input type="text" id="search" class="swiper-input w-full bg-transparent text-lightText">
               </div>
-              <h2 class="font-serif text-4xl text-lightText">Transforme seus sonhos em destinos.</h2>
+              <h2 class="font-serif md:text-4xl text-3xl text-lightText">Transforme seus sonhos em destinos.</h2>
               <p class="text-sm text-lightText">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla dolores aliquid quos minima soluta ut blanditiis voluptate ab quidem, consequatur perferendis. Fugiat, tempore pariatur? Alias tempora accusamus dolores ab recusandae?</p>
               <button class="w-1/2 p-2 rounded-3xl backdrop-blur-lg border text-lightText">Conheça</button>
             </div>
-            <div class="description-right w-2/6 flex flex-row gap-4"  data-aos="fade-up">
+            <div class="description-right md:w-2/6 xm:flex hidden flex-row gap-4"  data-aos="fade-up">
               <button class="flex items-center justify-center w-12 h-12 p-4 pl-5 border rounded-full backdrop-blur-lg text-4xl text-lightText cursor-pointer">
                 <i class='bx bx-play text-4xl'></i>
               </button>
               <div class="video-desc flex flex-col gap-2">
-                <h4 class="pt-2 text-2xl font-bold font-serif text-lightText">Bahamas</h4>
+                <h4 class="pt-2 md:text-2xl text-xl font-bold font-serif text-lightText">Bahamas</h4>
                 <p class="text-sm text-lightText">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti sunt nihil pariatur soluta assumenda non, corporis nostrum voluptatibus, id est, voluptas ullam laboriosam porro! Sed laborum repellat reiciendis alias aspernatur.</p>
               </div>
             </div>
           </div>
         </div>
         <div class="swiper-slide" id="2">
-          <img class="object-cover w-full h-full" src="assets/finland.jpg" alt="imagem finlândia">
+          <img class="object-cover w-full h-full" src="assets/finland.jpg" alt="imagem bahamas">
           <div class="absolute inset-0 bg-slideBackground backdrop-blur-sm"></div>
-          <div class="swiper-description px-32 w-full absolute flex flex-row items-center justify-between gap-16 z-100">
-            <div class="description-left w-3/6 flex flex-col gap-8">
-              <div class="input flex items-center p-2 border  border-lightText rounded-3xl backdrop-blur-lg">
-                <label for="search" class="flex items-center px-2 border-r border-lightText  mr-2">
+          <div class="swiper-description xl:px-32 lg:px-24 md:px-8 px-4 w-full absolute flex flex-row items-center justify-between gap-8 md:gap-16 z-100">
+            <div class="description-left md:w-3/6 flex flex-col gap-8 items-center xm:items-start"  data-aos="fade-up">
+              <div class="input w-full flex items-center p-2 border border-lightText rounded-3xl backdrop-blur-lg">
+                <label for="search" class="flex items-center px-2 border-r border-lightText mr-2">
                   <i class='bx bx-search text-lg text-lightText'></i>
                 </label>
                 <input type="text" id="search" class="swiper-input w-full bg-transparent text-lightText">
               </div>
-              <h2 class="font-serif text-4xl text-lightText">Transforme seus sonhos em destinos.</h2>
+              <h2 class="font-serif md:text-4xl text-3xl text-lightText">Transforme seus sonhos em destinos.</h2>
               <p class="text-sm text-lightText">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla dolores aliquid quos minima soluta ut blanditiis voluptate ab quidem, consequatur perferendis. Fugiat, tempore pariatur? Alias tempora accusamus dolores ab recusandae?</p>
               <button class="w-1/2 p-2 rounded-3xl backdrop-blur-lg border text-lightText">Conheça</button>
             </div>
-            <div class="description-right w-2/6 flex flex-row gap-4">
+            <div class="description-right md:w-2/6 xm:flex hidden flex-row gap-4"  data-aos="fade-up">
               <button class="flex items-center justify-center w-12 h-12 p-4 pl-5 border rounded-full backdrop-blur-lg text-4xl text-lightText cursor-pointer">
                 <i class='bx bx-play text-4xl'></i>
               </button>
               <div class="video-desc flex flex-col gap-2">
-                <h4 class="pt-2 text-2xl font-bold font-serif text-lightText">Bahamas</h4>
+                <h4 class="pt-2 md:text-2xl text-xl font-bold font-serif text-lightText">Bahamas</h4>
                 <p class="text-sm text-lightText">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti sunt nihil pariatur soluta assumenda non, corporis nostrum voluptatibus, id est, voluptas ullam laboriosam porro! Sed laborum repellat reiciendis alias aspernatur.</p>
               </div>
             </div>
           </div>
         </div>
         <div class="swiper-slide" id="3">
-          <img class="object-cover w-full h-full" src="assets/maldivas.jpg" alt="imagem maldivas">
+          <img class="object-cover w-full h-full" src="assets/maldivas.jpg" alt="imagem bahamas">
           <div class="absolute inset-0 bg-slideBackground backdrop-blur-sm"></div>
-          <div class="swiper-description px-32 w-full absolute flex flex-row items-center justify-between gap-16 z-100">
-            <div class="description-left w-3/6 flex flex-col gap-8">
-              <div class="input flex items-center p-2 border border-lightText rounded-3xl backdrop-blur-lg">
+          <div class="swiper-description xl:px-32 lg:px-24 md:px-8 px-4 w-full absolute flex flex-row items-center justify-between gap-8 md:gap-16 z-100">
+            <div class="description-left md:w-3/6 flex flex-col gap-8 items-center xm:items-start"  data-aos="fade-up">
+              <div class="input w-full flex items-center p-2 border border-lightText rounded-3xl backdrop-blur-lg">
                 <label for="search" class="flex items-center px-2 border-r border-lightText mr-2">
                   <i class='bx bx-search text-lg text-lightText'></i>
                 </label>
                 <input type="text" id="search" class="swiper-input w-full bg-transparent text-lightText">
               </div>
-              <h2 class="font-serif text-4xl text-lightText">Transforme seus sonhos em destinos.</h2>
+              <h2 class="font-serif md:text-4xl text-3xl text-lightText">Transforme seus sonhos em destinos.</h2>
               <p class="text-sm text-lightText">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla dolores aliquid quos minima soluta ut blanditiis voluptate ab quidem, consequatur perferendis. Fugiat, tempore pariatur? Alias tempora accusamus dolores ab recusandae?</p>
               <button class="w-1/2 p-2 rounded-3xl backdrop-blur-lg border text-lightText">Conheça</button>
             </div>
-            <div class="description-right w-2/6 flex flex-row gap-4">
+            <div class="description-right md:w-2/6 xm:flex hidden flex-row gap-4"  data-aos="fade-up">
               <button class="flex items-center justify-center w-12 h-12 p-4 pl-5 border rounded-full backdrop-blur-lg text-4xl text-lightText cursor-pointer">
                 <i class='bx bx-play text-4xl'></i>
               </button>
               <div class="video-desc flex flex-col gap-2">
-                <h4 class="pt-2 text-2xl font-bold font-serif text-lightText">Bahamas</h4>
+                <h4 class="pt-2 md:text-2xl text-xl font-bold font-serif text-lightText">Bahamas</h4>
                 <p class="text-sm text-lightText">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti sunt nihil pariatur soluta assumenda non, corporis nostrum voluptatibus, id est, voluptas ullam laboriosam porro! Sed laborum repellat reiciendis alias aspernatur.</p>
               </div>
             </div>
           </div>
         </div>
         <div class="swiper-slide" id="4">
-          <img class="object-cover w-full h-full" src="assets/rio-de-janeiro.jpg" alt="imagem rio">
+          <img class="object-cover w-full h-full" src="assets/rio-de-janeiro.jpg" alt="imagem bahamas">
           <div class="absolute inset-0 bg-slideBackground backdrop-blur-sm"></div>
-          <div class="swiper-description px-32 w-full absolute flex flex-row items-center justify-between gap-16 z-100">
-            <div class="description-left w-3/6 flex flex-col gap-8">
-              <div class="input flex items-center p-2 border border-lightText rounded-3xl backdrop-blur-lg">
+          <div class="swiper-description xl:px-32 lg:px-24 md:px-8 px-4 w-full absolute flex flex-row items-center justify-between gap-8 md:gap-16 z-100">
+            <div class="description-left md:w-3/6 flex flex-col gap-8 items-center xm:items-start"  data-aos="fade-up">
+              <div class="input w-full flex items-center p-2 border border-lightText rounded-3xl backdrop-blur-lg">
                 <label for="search" class="flex items-center px-2 border-r border-lightText mr-2">
                   <i class='bx bx-search text-lg text-lightText'></i>
                 </label>
                 <input type="text" id="search" class="swiper-input w-full bg-transparent text-lightText">
               </div>
-              <h2 class="font-serif text-4xl text-lightText">Transforme seus sonhos em destinos.</h2>
+              <h2 class="font-serif md:text-4xl text-3xl text-lightText">Transforme seus sonhos em destinos.</h2>
               <p class="text-sm text-lightText">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla dolores aliquid quos minima soluta ut blanditiis voluptate ab quidem, consequatur perferendis. Fugiat, tempore pariatur? Alias tempora accusamus dolores ab recusandae?</p>
               <button class="w-1/2 p-2 rounded-3xl backdrop-blur-lg border text-lightText">Conheça</button>
             </div>
-            <div class="description-right w-2/6 flex flex-row gap-4">
+            <div class="description-right md:w-2/6 xm:flex hidden flex-row gap-4"  data-aos="fade-up">
               <button class="flex items-center justify-center w-12 h-12 p-4 pl-5 border rounded-full backdrop-blur-lg text-4xl text-lightText cursor-pointer">
                 <i class='bx bx-play text-4xl'></i>
               </button>
               <div class="video-desc flex flex-col gap-2">
-                <h4 class="pt-2 text-2xl font-bold font-serif text-lightText">Bahamas</h4>
+                <h4 class="pt-2 md:text-2xl text-xl font-bold font-serif text-lightText">Bahamas</h4>
                 <p class="text-sm text-lightText">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti sunt nihil pariatur soluta assumenda non, corporis nostrum voluptatibus, id est, voluptas ullam laboriosam porro! Sed laborum repellat reiciendis alias aspernatur.</p>
               </div>
             </div>
@@ -165,7 +166,7 @@
       </div>
     </div>
     <!--top destinations-->
-    <div id="top-destinations" class="top-destinations w-full flex flex-col gap-8 py-16 px-32">
+    <div id="top-destinations" class="top-destinations w-full flex flex-col gap-8 py-16 xl:px-32 lg:px-24 md:px-8 px-4">
       <div class="top flex flex-row justify-between">
         <h2 class="text-2xl text-black font-bold">Explore The Most Visited Places</h2>
         <div class="buttons flex gap-2">
@@ -177,8 +178,8 @@
           </button>
         </div>
       </div>
-      <div class="cards-container w-full flex gap-8">
-        <div class="card w-1/4 flex flex-col gap-2 p-2 bg-white shadow-cardShadow rounded-3xl cursor-pointer">
+      <div class="cards-container w-full grid lg:grid-cols-4 md:grid-cols-3 xm:grid-cols-2 grid-cols-1 justify-items-center gap-8">
+        <div class="card xm:w-auto w-72 flex flex-col flex-wrap gap-2 p-2 bg-white shadow-cardShadow rounded-3xl cursor-pointer">
           <img src="assets/bahamas.jpg" alt="bahamas" class="h-80 rounded-2xl object-cover">
           <div class="card-bottom p-2">
             <h5 class="text-lg text-black font-bold">Bahamas</h5>
@@ -207,7 +208,7 @@
             <p class="text-sm text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
           </div>
         </div>
-        <div class="card w-1/4 flex flex-col gap-2 p-2 bg-white shadow-cardShadow rounded-3xl cursor-pointer">
+        <div class="card xm:w-auto w-72 flex flex-col flex-wrap gap-2 p-2 bg-white shadow-cardShadow rounded-3xl cursor-pointer">
           <img src="assets/bahamas.jpg" alt="bahamas" class="h-80 rounded-2xl object-cover">
           <div class="card-bottom p-2">
             <h5 class="text-lg text-black font-bold">Bahamas</h5>
@@ -236,7 +237,7 @@
             <p class="text-sm text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
           </div>
         </div>
-        <div class="card w-1/4 flex flex-col gap-2 p-2 bg-white shadow-cardShadow rounded-3xl cursor-pointer">
+        <div class="card xm:w-auto w-72 flex flex-col flex-wrap gap-2 p-2 bg-white shadow-cardShadow rounded-3xl cursor-pointer">
           <img src="assets/bahamas.jpg" alt="bahamas" class="h-80 rounded-2xl object-cover">
           <div class="card-bottom p-2">
             <h5 class="text-lg text-black font-bold">Bahamas</h5>
@@ -265,7 +266,7 @@
             <p class="text-sm text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
           </div>
         </div>
-        <div class="card w-1/4 flex flex-col gap-2 p-2 bg-white shadow-cardShadow rounded-3xl cursor-pointer">
+        <div class="card xm:w-auto w-72 flex flex-col flex-wrap gap-2 p-2 bg-white shadow-cardShadow rounded-3xl cursor-pointer">
           <img src="assets/bahamas.jpg" alt="bahamas" class="h-80 rounded-2xl object-cover">
           <div class="card-bottom p-2">
             <h5 class="text-lg text-black font-bold">Bahamas</h5>
@@ -297,7 +298,7 @@
       </div>
     </div>
     <!--separator/infos-->
-    <div class="separator relative flex flex-row justify-around py-16">
+    <div class="separator relative grid xmd:grid-cols-4 xm:grid-cols-2 gap-y-8 items-center py-16">
       <div class="absolute inset-0 dark:bg-slideBackground"></div>
       <div class="circle-box flex flex-col items-center gap-4 z-50">
         <div class="circle-container relative h-56 w-56">
@@ -329,10 +330,10 @@
       </div>
     </div>
     <!--dont worry-->
-    <div class="dont-worry flex gap-8 w-full h-screen px-32 py-16">
-      <div class="content w-1/2 flex flex-col gap-8">
+    <div class="dont-worry grid sm:grid-cols-2 grid-cols-1 gap-8 w-full min-h-screen xl:px-32 lg:px-24 md:px-8 px-4 py-16">
+      <div class="content flex flex-col gap-8">
         <h2 class="font-bold text-2xl text-black">Don't worry about the details</h2>
-        <div class="details flex flex-col gap-16">
+        <div class="details flex flex-col sm:gap-16 gap-8">
           <div class="car-location flex flex-col items-start gap-4">
             <div class="header flex items-center gap-2">
               <i class='bx bxs-car text-3xl text-black'></i>
@@ -351,7 +352,7 @@
           </div>
         </div>
       </div>
-      <img src="assets/rio-de-janeiro.jpg" alt="rio image" class="w-1/2 object-cover rounded-3xl">
+      <img src="assets/rio-de-janeiro.jpg" alt="rio image" class="sm:h-screen h-64 sm:w-auto w-full object-cover rounded-3xl">
     </div>
     <!--separator/swiper-->
     <div class="w-full pt-8 flex flex-col  overflow-hidden">
@@ -359,49 +360,49 @@
       <div class="swiper-separator bg-darkBodyBackground py-16 cursor-pointer">
         <div class="swiper-wrapper w-full h-full flex items-center">
           <div class="swiper-slide flex items-center justify-center" id="1">
-            <img src="assets/eurofarma.png" alt="eurofarma logo" class="w-3/4">
+            <img src="assets/eurofarma.png" alt="eurofarma logo" class="sm:w-3/4 xm:w-4/5 w-7/8">
           </div>
           <div class="swiper-slide flex items-center justify-center" id="2">
-            <img src="assets/germed.png" alt="germed logo" class="w-3/4">
+            <img src="assets/germed.png" alt="germed logo" class="sm:w-3/4 xm:w-4/5 w-7/8">
           </div>
           <div class="swiper-slide flex items-center justify-center" id="3">
-            <img src="assets/lacoste.png" alt="lacoste logo" class="w-3/4">
+            <img src="assets/lacoste.png" alt="lacoste logo" class="sm:w-3/4 xm:w-4/5 w-7/8">
           </div>
           <div class="swiper-slide flex items-center justify-center" id="4">
-            <img src="assets/sandoz.png" alt="sandoz logo" class="w-3/4">
+            <img src="assets/sandoz.png" alt="sandoz logo" class="sm:w-3/4 xm:w-4/5 w-7/8">
           </div>
           <div class="swiper-slide flex items-center justify-center" id="5">
-            <img src="assets/check.png" alt="check logo" class="w-3/4">
+            <img src="assets/check.png" alt="check logo" class="sm:w-3/4 xm:w-4/5 w-7/8">
           </div>
           <div class="swiper-slide flex items-center justify-center" id="6">
-            <img src="assets/neo-quimica.png" alt="neo-quimica logo" class="w-3/4">
+            <img src="assets/neo-quimica.png" alt="neo-quimica logo" class="sm:w-3/4 xm:w-4/5 w-7/8">
           </div>
           <div class="swiper-slide flex items-center justify-center" id="7">
-            <img src="assets/starbucks.png" alt="starbucks logo" class="w-3/4">
+            <img src="assets/starbucks.png" alt="starbucks logo" class="sm:w-3/4 xm:w-4/5 w-7/8">
           </div>
           <div class="swiper-slide flex items-center justify-center" id="8">
-            <img src="assets/shell.png" alt="shell logo" class="max-w-3/4 h-32">
+            <img src="assets/shell.png" alt="shell logo" class="max-w-3/4 xm:h-32 h-16">
           </div>
           <div class="swiper-slide flex items-center justify-center" id="9">
-            <img src="assets/pepsi.png" alt="pepsi logo" class="max-w-3/4 h-32">
+            <img src="assets/pepsi.png" alt="pepsi logo" class="max-w-3/4 xm:h-32 h-16">
           </div>
         </div>
       </div>
     </div>
     <!--do you know-->
-    <div id="news" class="do-you-know relative w-full flex justify-end">
+    <div id="news" class="do-you-know relative w-full min-h-screen flex justify-end">
       <div class="absolute inset-0 dark:bg-slideBackground"></div>
-      <aside class="right w-1/2 pr-32 pl-16 py-16 flex flex-col items-center gap-8 bg-transparentBackground  backdrop-blur-sm z-50">
+      <aside class="right md:w-1/2 xm:w-2/3 w-full xl:pr-32 lg:pr-24 md:pr-8 pr-4 pl-16 py-16 flex flex-col items-center gap-8 bg-transparentBackground  backdrop-blur-sm z-50">
         <h2 class="font-bold text-2xl text-black">Do you Know?</h2>
         <p class="text-black">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus sit nisi alias! Aspernatur enim ut, voluptatibus at deleniti vel earum recusandae sequi dolores, ipsum adipisci distinctio doloribus accusamus nam officiis? <br> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus laboriosam deserunt, quod ea placeat commodi! Aliquid deserunt necessitatibus, eveniet quidem repellendus iusto. Eaque nulla similique iste. Deleniti at omnis quaerat. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus sapiente illo sint praesentium magni placeat quidem? Non sunt corporis ducimus eius ad? Sit, consequuntur laborum provident cum accusantium soluta error! <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, laborum. Incidunt nihil at nulla eligendi laborum perferendis nobis mollitia atque, eius excepturi labore illum repellendus, similique, provident vel omnis et!</p>
         <button class="rounded-3xl border border-black px-4 py-2 text-black">Find out more</button>
       </aside>
     </div>
     <!--testimonials-->
-    <div id="testimonials" class="testimonials w-full px-32 py-16 flex flex-col gap-16">
+    <div id="testimonials" class="testimonials w-full xl:px-32 lg:px-24 md:px-8 px-4 py-16 flex flex-col gap-16">
       <h2 class="font-bold text-2xl text-black">See some testimonials</h2>
-      <div class="cards-container flex flex-row flex-wrap justify-center gap-8">
-        <div class="card relative w-72 flex flex-col gap-2 p-4 pt-12 bg-white shadow-cardShadow rounded-3xl cursor-pointer" data-aos="fade-up">
+      <div class="cards-container flex flex-row flex-wrap justify-center gap-x-8 gap-y-16">
+        <div class="card relative max-w-72 flex flex-col gap-2 p-4 pt-12 bg-white shadow-cardShadow rounded-3xl cursor-pointer" data-aos="fade-up">
           <i class='bx bx-user h-[66px] w-[66px] absolute top-[-33px] left-[111px] bg-bodyBackground rounded-full flex items-center justify-center text-4xl text-black'></i>
           <h4 class="font-bold text-lg self-center text-black">Ana de Souza</h4>
           <div class="stars self-center">
@@ -413,7 +414,7 @@
           </div>
           <p class="text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus est facere perspiciatis asperiores! Cumque odit non nam velit odio hic? Amet, dolor doloribus. Numquam neque, ea illum esse sequi similique.</p>
         </div>
-        <div class="card relative w-72 flex flex-col gap-2 p-4 pt-12 bg-white shadow-cardShadow rounded-3xl cursor-pointer" data-aos="fade-up">
+        <div class="card relative max-w-72 flex flex-col gap-2 p-4 pt-12 bg-white shadow-cardShadow rounded-3xl cursor-pointer" data-aos="fade-up">
           <i class='bx bx-user h-[66px] w-[66px] absolute top-[-33px] left-[111px] bg-bodyBackground rounded-full flex items-center justify-center text-4xl text-black'></i>
           <h4 class="font-bold text-lg self-center text-black">Ana de Souza</h4>
           <div class="stars self-center">
@@ -425,7 +426,7 @@
           </div>
           <p class="text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus est facere perspiciatis asperiores! Cumque odit non nam velit odio hic? Amet, dolor doloribus. Numquam neque, ea illum esse sequi similique.</p>
         </div>
-        <div class="card relative w-72 flex flex-col gap-2 p-4 pt-12 bg-white shadow-cardShadow rounded-3xl cursor-pointer" data-aos="fade-up">
+        <div class="card relative max-w-72 flex flex-col gap-2 p-4 pt-12 bg-white shadow-cardShadow rounded-3xl cursor-pointer" data-aos="fade-up">
           <i class='bx bx-user h-[66px] w-[66px] absolute top-[-33px] left-[111px] bg-bodyBackground rounded-full flex items-center justify-center text-4xl text-black'></i>
           <h4 class="font-bold text-lg self-center text-black">Ana de Souza</h4>
           <div class="stars self-center">
@@ -437,7 +438,7 @@
           </div>
           <p class="text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus est facere perspiciatis asperiores! Cumque odit non nam velit odio hic? Amet, dolor doloribus. Numquam neque, ea illum esse sequi similique.</p>
         </div>
-        <div class="card relative w-72 flex flex-col gap-2 p-4 pt-12 bg-white shadow-cardShadow rounded-3xl cursor-pointer" data-aos="fade-up">
+        <div class="card relative max-w-72 flex flex-col gap-2 p-4 pt-12 bg-white shadow-cardShadow rounded-3xl cursor-pointer" data-aos="fade-up">
           <i class='bx bx-user h-[66px] w-[66px] absolute top-[-33px] left-[111px] bg-bodyBackground rounded-full flex items-center justify-center text-4xl text-black'></i>
           <h4 class="font-bold text-lg self-center text-black">Ana de Souza</h4>
           <div class="stars self-center">
@@ -449,7 +450,7 @@
           </div>
           <p class="text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus est facere perspiciatis asperiores! Cumque odit non nam velit odio hic? Amet, dolor doloribus. Numquam neque, ea illum esse sequi similique.</p>
         </div>
-        <div class="card relative w-72 flex flex-col gap-2 p-4 pt-12 bg-white shadow-cardShadow rounded-3xl cursor-pointer" data-aos="fade-up">
+        <div class="card relative max-w-72 flex flex-col gap-2 p-4 pt-12 bg-white shadow-cardShadow rounded-3xl cursor-pointer" data-aos="fade-up">
           <i class='bx bx-user h-[66px] w-[66px] absolute top-[-33px] left-[111px] bg-bodyBackground rounded-full flex items-center justify-center text-4xl text-black'></i>
           <h4 class="font-bold text-lg self-center text-black">Ana de Souza</h4>
           <div class="stars self-center">
@@ -464,9 +465,9 @@
       </div>
     </div>
     <!--contact us-->
-    <div id="contact-us" class="contact-us bg-white px-32 pt-16 pb-8 flex flex-col gap-8 dark:bg-darkBodyBackground">
+    <div id="contact-us" class="contact-us bg-white xl:px-32 lg:px-24 md:px-8 px-4 pt-16 pb-8 flex flex-col gap-8 dark:bg-darkBodyBackground">
       <h2 class="font-bold text-2xl text-black">Contact Us</h2>
-      <div class="infos flex flex-row justify-around">
+      <div class="infos grid md:grid-cols-3 grid-cols-1 gap-y-8">
         <div class="telephone flex flex-col gap-8 items-center">
           <i class='bx bxs-phone h-14 w-14 flex items-center justify-center p-4 border rounded-full text-3xl text-black'></i>
           <div class="details flex flex-col gap-2 items-center">
@@ -477,29 +478,27 @@
         <div class="email flex flex-col gap-8 items-center">
           <i class='bx bxs-envelope h-14 w-14 flex items-center justify-center p-4 border rounded-full text-3xl text-black'></i>
           <div class="details flex flex-col gap-2 items-center">
-            <p class="text-black"><span class="font-bold text-blue">Send an email: </span>contact@altavia.com</p>
+            <p class="text-black"><span class="font-bold text-blue">Email: </span>contact@altavia.com</p>
           </div>
         </div>
         <div class="adress flex flex-col gap-8 items-center">
           <i class='bx bxs-map h-14 w-14 flex items-center justify-center p-4 border rounded-full text-3xl text-black'></i>
           <div class="details flex flex-col gap-2 items-center">
-            <p class="text-black"><span class="font-bold text-blue">Adress: </span> 11<sup>th</sup> Street, 110 - Downtown, LA</p>
+            <p class="text-black text-center"><span class="font-bold text-blue">Adress: </span> 11<sup>th</sup> Street, 110 - Downtown, LA</p>
             <p class="text-black"><span class="font-bold text-blue">Time: </span>09:00 - 18h:0</p>
           </div>
         </div>
       </div>
     </div>
     <!--message-->
-    <div class="message px-32 pt-8 pb-16 bg-white flex flex-row gap-32 items-center justify-center dark:bg-darkBodyBackground">
+    <div class="message xl:px-32 lg:px-24 md:px-8 px-4 pt-8 pb-16 bg-white grid md:grid-cols-2 grid-cols-1 md:gap-16 gap-8 items-center justify-items-center dark:bg-darkBodyBackground">
       <h2 
-        class="text-xl text-center text-black"
-        style="width: calc(50% - 16px);">
+        class="text-xl text-center text-black w-full">
         Send us a Message
       </h2>
       <form 
         id="contact-form"
-        class="flex flex-col gap-4"
-        style="width: calc(50% - 16px);">
+        class="flex flex-col gap-4 md:w-full sm:w-2/3 w-full">
         <input type="email" name="user_email" id="email" placeholder="Email" class="p-2 border border-gray w-full bg-white text-black">
         <input type="text" name="user_name" id="name" placeholder="Name" class="p-2 border border-gray w-full bg-white text-black">
         <input type="text" name="subject" id="subject" placeholder="Subject" class="p-2 border border-gray w-full bg-white text-black">
@@ -509,13 +508,13 @@
     </div>
   </main>
   <!--footer-->
-  <footer class="bg-footerBackground px-32 pt-16 pb-4 flex flex-col">
-    <div class="top pb-8 flex flex-row items-start justify-between gap-16 border-b border-b-[2px] border-b-black">
+  <footer class="bg-footerBackground xl:px-32 lg:px-24 md:px-8 px-4 pt-16 pb-4 flex flex-col">
+    <div class="top pb-8 flex xm:flex-row flex-col items-start justify-between gap-16 border-b border-b-[2px] border-b-black">
       <div class="left flex flex-row items-center gap-4">
         <i class='bx bx-map-alt text-[28px] text-black'></i>
         <h2 class="font-bold text-3xl text-black">Altavia</h2>
       </div>
-      <div class="right flex flex-row gap-16">
+      <div class="right grid md:grid-cols-4 sm:grid-cols-3 xm:grid-cols-2 grid-cols-4 md:gap-16 gap-8">
         <div class="col">
           <p class="uppercase font-bold text-black tracking-wide cursor-pointer">Pre-sale FAQs</p>
           <p class="uppercase font-bold text-black tracking-wide cursor-pointer">Submit a Ticket</p>

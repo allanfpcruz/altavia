@@ -30,6 +30,13 @@ tailwind.config = {
       },
       boxShadow: {
         cardShadow: "var(--card-shadow)",
+      },
+      screens: {
+        lg: '1096px',
+        'xmd': '910px', 
+        md: '872px',
+        sm: '774px',
+        'xm': '640px'
       }
     }
   }

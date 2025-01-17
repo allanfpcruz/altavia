@@ -118,7 +118,7 @@ header #theme-toggle:checked+.theme-toggle::before {
 
 .swiper .swiper-wrapper .swiper-slide .swiper-description {
   transform: translate(-50%, -50%);
-  top: 50%;
+  top: 55%;
   left: 50%;
 }
 
