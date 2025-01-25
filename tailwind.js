@@ -36,7 +36,8 @@ tailwind.config = {
         'xmd': '910px', 
         md: '872px',
         sm: '774px',
-        'xm': '640px'
+        'xm': '640px',
+        'xxm': '450px'
       }
     }
   }
