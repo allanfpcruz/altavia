@@ -11,6 +11,11 @@ links.forEach(link => {
   })
 })
 
+//muda a classe do header de acordo com o menu hamburguer
+document.querySelector('#menu-toggle').addEventListener('click', () => {
+  document.querySelector('#header').classList.toggle('menu-opened')
+})
+
 //mudar tema
 document.querySelector('#theme-toggle').addEventListener('click', (e) => {
   document.documentElement.classList.toggle('dark')
@@ -55,7 +60,7 @@ var swiper2 = new Swiper('.swiper-separator', {
 AOS.init({
   duration: 1000,
   once: true,
-  offset: 200,
+  offset: 100,
 })
 
 //configurações da primeira progressbar

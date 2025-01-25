@@ -29,6 +29,12 @@
   }
 }
 
+@media screen and (max-width: 773px) {
+  header nav ul {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 640px) {
   .swiper .swiper-wrapper .swiper-slide .swiper-description {
     transform: translate(-50%, -50%);

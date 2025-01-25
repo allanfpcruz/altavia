@@ -49,9 +49,62 @@ body, html {
   width: calc(100% - 256px);
 }
 
+header.menu-opened {
+  background: var(--header-hover);
+  border-radius: 24px 24px 0 0;
+}
+
 header:hover {
   background: var(--header-hover);
   backdrop-filter: blur(0px);
+}
+
+/*menu hamburguer*/
+header nav .menu-icon span {
+  display: block;
+  width: 100%;
+  height: 4px;
+  background: var(--transparent);
+  border-radius: 4px;
+  transition: 0.3s ease;
+}
+
+header:hover nav .menu-icon span,
+header.menu-opened nav .menu-icon span {
+  background: var(--body-bg);
+}
+
+header nav .menu-toggle:checked + .menu-icon span:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+
+header nav .menu-toggle:checked + .menu-icon span:nth-child(2) {
+  opacity: 0;
+}
+
+header nav .menu-toggle:checked + .menu-icon span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+header nav .menu-toggle:checked ~ ul {
+  z-index: -1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding: 32px 0;
+  background: var(--header-hover);
+  border-radius: 24px;
+}
+
+header nav .menu-toggle:checked ~ ul li::after {
+  width: 200px;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 header nav ul li {
@@ -104,11 +157,13 @@ header .theme-toggle::before {
   transition: all .3s ease;
 }
 
-header:hover .theme-toggle {
+header:hover .theme-toggle,
+header.menu-opened .theme-toggle {
   background: var(--body-bg);
 }
 
-header:hover .theme-toggle::before {
+header:hover .theme-toggle::before,
+header.menu-opened .theme-toggle::before {
   background: var(--gray);
 }
 
@@ -192,7 +247,11 @@ footer .bottom .icons > .circle:hover i {
   color: var(--white);
 }
 
+body,
+.header-container,
 header,
+header nav,
+header nav ul,
 .top-destinations .cards-container .card,
 .dont-worry button,
 .swiper .swiper-wrapper .swiper-slide .swiper-description button,
